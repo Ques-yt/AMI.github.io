@@ -1,12 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marriage Invitation</title>
+  
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
   <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Roboto', Arial, sans-serif;
       margin: 0;
@@ -60,6 +66,7 @@
     .event-details table tr:nth-child(even) {
       background: #fbc2eb;
     }
+
     .footer-info {
       margin: 40px 0;
       font-size: 1.3em;
@@ -70,7 +77,7 @@
       text-decoration: none;
       font-weight: bold;
       background: #fbc2eb;
-      padding: 8px 15px;
+      padding: 10px 20px;
       border-radius: 8px;
       transition: 0.3s;
     }
@@ -79,6 +86,7 @@
       color: white;
       box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
     }
+
     footer {
       background: linear-gradient(to right, #2575fc, #6a11cb);
       color: white;
@@ -86,22 +94,8 @@
       font-size: 1.2em;
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
     }
-    p {
-      margin: 15px 0;
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    /* New button styles */
+
+    /* Invitation Button */
     .invitation-button {
       background: linear-gradient(to right, #6a11cb, #2575fc);
       color: white;
@@ -117,32 +111,55 @@
     .invitation-button:hover {
       background: linear-gradient(to right, #2575fc, #6a11cb);
       transform: translateY(-5px);
-      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
     }
-    /* Pulsing effect */
-    .invitation-button:active {
-      animation: pulse 0.4s ease-out;
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    /* Pulse animation */
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
+      header {
+        font-size: 2em;
+      }
+      .event-details table, .event-details th, .event-details td {
+        font-size: 1em;
+        padding: 10px;
+      }
       .invitation-button {
-        width: 100%;
+        width: 90%;
         font-size: 1.2em;
-        padding: 12px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .event-details {
+        padding: 15px;
+      }
+      .footer-info a {
+        padding: 8px 15px;
+        font-size: 0.9em;
       }
     }
   </style>
 </head>
+
 <body>
+
   <header>
     💐❤️ 🤵 Abhishek 🤝🏻 Komal 👰 ❤️💐
   </header>
+
   <main>
     <p style="font-size: 1.5em; color: #6a11cb; font-weight: bold;">🥰🎉 Your Presence Is The Greatest Gift For Us! 🥰🎉</p>
 
@@ -156,19 +173,19 @@
           <th>LOCATION</th>
         </tr>
         <tr>
-          <td>💍 Engagement 💍</td>
+          <td>💍 Engagement</td>
           <td>17/01/2025</td>
           <td>02:00 PM</td>
           <td>Kuchu</td>
         </tr>
         <tr>
-          <td>💒 Wedding 💒</td>
+          <td>💒 Wedding</td>
           <td>19/01/2025</td>
           <td>10:00 PM</td>
           <td>Kuchu</td>
         </tr>
         <tr>
-          <td>🎊 Reception 🎊</td>
+          <td>🎊 Reception</td>
           <td>20/01/2025</td>
           <td>05:00 PM</td>
           <td>Jharmunga</td>
@@ -177,18 +194,18 @@
     </div>
 
     <div class="footer-info">
-      <p>📍 <span style="color: #2575fc;">For venue directions, click below:</span></p>
-      <p><a href="https://maps.app.goo.gl/qHMrBcGUQ7s4fWPGA?g_st=ac" target="_blank">View Location on Google Maps</a></p>
-      <p>📞 <span style="color: #2575fc;">Contact Us:</span></p>
-      <p><a href="tel:+7631144474">7631144474</a> <a href="tel:+9661781841">9661781841</a> <a href="tel:+8877285898">8877285898</a></p>
+      <p>📍 <a href="https://maps.app.goo.gl/qHMrBcGUQ7s4fWPGA" target="_blank">View Location on Google Maps</a></p>
+      <p>📞 <a href="tel:+7631144474">7631144474</a> | <a href="tel:+9661781841">9661781841</a> | <a href="tel:+8877285898">8877285898</a></p>
     </div>
 
     <!-- Invitation Button -->
-    <a href="p.html" class="invitation-button">View Card</a>
+    <a href="p.html" class="invitation-button">📸 View Photos</a>
 
   </main>
+
   <footer>
     ❤️ With Love, Abhishek & Komal ❤️
   </footer>
+
 </body>
 </html>
